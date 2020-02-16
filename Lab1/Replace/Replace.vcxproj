@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{70661DC8-B0A6-4836-9A8C-F645A5143E58}</ProjectGuid>
+    <ProjectGuid>{00FB25FC-891D-4640-881B-C6E902D8F611}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CopyFile</RootNamespace>
+    <RootNamespace>Replace</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -163,21 +163,30 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CopyFile.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="answer0.txt" />
-    <Text Include="answer1.txt" />
-    <Text Include="empty.txt" />
-    <Text Include="input.txt" />
-    <Text Include="not_empty.txt" />
-    <Text Include="output.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CopyFile.h" />
+    <ClCompile Include="Replace.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="tests.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Answer0.txt" />
+    <Text Include="Answer1.txt" />
+    <Text Include="Answer2.txt" />
+    <Text Include="Answer3.txt" />
+    <Text Include="Answer4.txt" />
+    <Text Include="Answer5.txt" />
+    <Text Include="Answer6.txt" />
+    <Text Include="output.txt" />
+    <Text Include="TestInput0.txt" />
+    <Text Include="TestInput1.txt" />
+    <Text Include="TestInput2.txt" />
+    <Text Include="TestInput3.txt" />
+    <Text Include="TestInput4.txt" />
+    <Text Include="TestInput5.txt" />
+    <Text Include="TestInput6.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Replace.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

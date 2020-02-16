@@ -28,13 +28,12 @@ int main(int argc, char* argv[])
 {
 	auto args = ParseArgs(argc, argv);
 
-	if (!ParseArgs)
+	if (!args)
 	{
 		return EXIT_FAILURE;
 	}
 
 	std::ifstream input(args->inputFileName);
-
 
 	if (!input.is_open())
 	{

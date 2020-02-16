@@ -32,6 +32,12 @@
     <Text Include="answer0.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="not_empty.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="answer1.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CopyFile.h">
