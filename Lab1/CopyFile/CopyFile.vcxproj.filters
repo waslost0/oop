@@ -26,10 +26,21 @@
     <Text Include="output.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="empty.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="answer0.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CopyFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tests.bat">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
