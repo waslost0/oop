@@ -15,38 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CopyFile.cpp">
+    <ClCompile Include="flipbyte.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="output.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="empty.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="input.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="multiline.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="not_empty.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="answer0.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="answer1.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="answer2.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CopyFile.h">
+    <ClInclude Include="flipbyte.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -54,5 +28,31 @@
     <None Include="tests.bat">
       <Filter>Source Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="4.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="16.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="32.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="64.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="150.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="23.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

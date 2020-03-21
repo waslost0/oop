@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CopyFile", "CopyFile\CopyFi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Replace", "Replace\Replace.vcxproj", "{00FB25FC-891D-4640-881B-C6E902D8F611}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "flipbyte", "flipbyte\flipbyte.vcxproj", "{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{00FB25FC-891D-4640-881B-C6E902D8F611}.Release|x64.Build.0 = Release|x64
 		{00FB25FC-891D-4640-881B-C6E902D8F611}.Release|x86.ActiveCfg = Release|Win32
 		{00FB25FC-891D-4640-881B-C6E902D8F611}.Release|x86.Build.0 = Release|Win32
+		{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}.Debug|x64.ActiveCfg = Debug|x64
+		{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}.Debug|x64.Build.0 = Debug|x64
+		{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}.Debug|x86.ActiveCfg = Debug|Win32
+		{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}.Debug|x86.Build.0 = Debug|Win32
+		{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}.Release|x64.ActiveCfg = Release|x64
+		{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}.Release|x64.Build.0 = Release|x64
+		{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}.Release|x86.ActiveCfg = Release|Win32
+		{19B03BF4-7E29-4D2A-BE63-E7A1A8FC3859}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,8 @@
 @echo off
 
 set PROGRAM="%~1"
-SET OUT="%TEMP%\output.txt"
-SET LOG="%TEMP%\log.txt"
+set OUT="%TEMP%\output.txt"
+set LOG="%TEMP%\log.txt"
 
 
 REM Replace '1' to '2' input file is empty
