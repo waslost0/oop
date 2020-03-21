@@ -22,7 +22,7 @@ std::optional<Args> ParseArgs(int argc, char* argv[])
 			<< "Usage: replace.exe <input file> <output file> <search string> <replace string>\n";
 		return std::nullopt;
 	}
-	
+
 	if (strcmp(argv[1], argv[2]) == 0) {
 		std::cout << "Invalid arguments.\nFiles cannot be equal."
 			<< "Usage: replace.exe <input file> <output file> <search string> <replace string>\n";
@@ -48,18 +48,31 @@ std::optional<Args> ParseArgs(int argc, char* argv[])
 	return args;
 }
 
-
-int EmptyReplace(std::optional<Args>& args, std::ifstream& inputFile, std::ofstream& output)
+void CopyFileWithReplace(std::istream& input, std::ostream& output,
+	const std::string& searchString, const std::string& replacementString)
 {
-	if (args->argsCount == 2)
+	std::string inputLine;
+	size_t lenSearchLine = searchString.length();
+	while (std::getline(input, inputLine))
 	{
-		std::string inputLine;
-		while (std::getline(inputFile, inputLine))
+		std::string newLine;
+		size_t pos = 0;
+		while (pos < inputLine.length())
 		{
-			output << inputLine << std::endl;
+			size_t insertPos = inputLine.find(searchString, pos);
+			newLine.append(inputLine, pos, insertPos - pos);
+			if (insertPos != std::string::npos)
+			{
+				newLine.append(replacementString);
+				pos = insertPos + lenSearchLine;
+			}
+			else
+			{
+				break;
+			}
 		}
+		output << newLine << std::endl;
 	}
-	return EXIT_FAILURE;
 }
 
 int main(int argc, char* argv[])
@@ -77,34 +90,24 @@ int main(int argc, char* argv[])
 		return EXIT_FAILURE;
 	}
 
-	std::ofstream output(args->outputFileName);
-	if (!output.is_open())
+	std::ofstream outputFile(args->outputFileName);
+	if (!outputFile.is_open())
 	{
 		std::cout << "Failed to open " << args->outputFileName << " for writing\n";
 		return EXIT_FAILURE;
 	}
 
-	EmptyReplace(args, inputFile, output);
-
-	std::string inputLine;
-
-	while (std::getline(inputFile, inputLine))
+	if (args->argsCount == 2 || args->searchString == "")
 	{
-		std::string newLine;
-		while (inputLine != "")
+		std::string inputLine;
+		while (std::getline(inputFile, inputLine))
 		{
-			size_t insertPos = inputLine.find(argv[3]);
-			newLine.append(inputLine, 0, insertPos);
-			if (insertPos != -1)
-			{
-				inputLine.erase(0, insertPos + args->searchString.length());
-				newLine += args->replaceString;
-			}
-			else
-			{
-				break;
-			}
+			outputFile << inputLine << std::endl;
 		}
-		output << newLine << std::endl;
+		return EXIT_SUCCESS;
 	}
+
+
+	CopyFileWithReplace(inputFile, outputFile, args->searchString, args->replaceString);
+
 }

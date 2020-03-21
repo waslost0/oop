@@ -5,8 +5,6 @@ SET OUT="%TEMP%\output.txt"
 SET LOG="%TEMP%\log.txt"
 
 
-
-
 REM Replace '1' to '2' input file is empty
 %PROGRAM% TestInput1.txt %OUT% "1" "2" || goto err
 fc.exe %OUT% Answer1.txt > %LOG% || goto err 
@@ -62,6 +60,12 @@ REM Replace 'lorem' to 'Merol' huge file
 fc.exe %OUT% Answer0.txt >> %LOG% || goto err
 echo Test 10 passed
 echo Test 10 passed >> %LOG%
+
+REM Replace '' to '' 
+%PROGRAM% TestInput7.txt %OUT% "" || goto err
+fc.exe %OUT% Answer7.txt >> %LOG% || goto err
+echo Test 11 passed
+echo Test 11 passed >> %LOG%
 
 echo Program testing succeeded
 echo Program testing succeeded >> %LOG%

@@ -38,6 +38,12 @@
     <Text Include="answer1.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="multiline.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="answer2.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CopyFile.h">

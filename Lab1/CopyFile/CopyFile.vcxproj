@@ -168,8 +168,10 @@
   <ItemGroup>
     <Text Include="answer0.txt" />
     <Text Include="answer1.txt" />
+    <Text Include="answer2.txt" />
     <Text Include="empty.txt" />
     <Text Include="input.txt" />
+    <Text Include="multiline.txt" />
     <Text Include="not_empty.txt" />
     <Text Include="output.txt" />
   </ItemGroup>
