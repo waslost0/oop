@@ -1,4 +1,4 @@
-﻿#include <fstream>
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -10,7 +10,7 @@ const int ROUNDING_FACTOR = 3;
 const std::string ERROR_DETERMINANT_NULL = "The determinant = 0, it is impossible to invert the matrix";
 const std::string ERROR_FILE_NOT_EXIST = "This file does not exist";
 const std::string ERROR_NOT_ENOUGH_ARGUMENTS = "The number of arguments does not match the task condition\n"
-	"Input should look: invert.exe <matrix file>";
+"Input should look: invert.exe <matrix file>";
 
 
 
@@ -140,6 +140,7 @@ void PrintInvertMatrix(Matrix3x3& inverseMatrix)
 		std::cout << std::endl;
 	}
 }
+
 
 int main(int argc, char* argv[])
 {
