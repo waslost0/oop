@@ -11,6 +11,8 @@ CTriangle::CTriangle(CPoint& vertex1, CPoint& vertex2, CPoint& vertex3, const st
 
 double CTriangle::GetSideCounting(const CPoint& firstPoint, const CPoint& secondPoint) const
 {
+    //A(-1;4); B(-1;2)
+	//АВ (с) = √((Хв-Ха)²+(Ув-Уа)²)
 	return sqrt(pow(secondPoint.GetX() - firstPoint.GetX(), POWER_NUMBER) + pow(secondPoint.GetY() - firstPoint.GetY(), POWER_NUMBER));
 }
 
@@ -40,7 +42,7 @@ double CTriangle::GetArea() const
 	double side1 = GetSideCounting(m_vertex1, m_vertex2);
 	double side2 = GetSideCounting(m_vertex2, m_vertex3);
 	double side3 = GetSideCounting(m_vertex1, m_vertex3);
-
+    // S=√(p(p-a)(p-b)(p-c))
 	double semiPerimeter = (side1 + side2 + side3) / MULTIPLICATION_FACTOR;
 	return sqrt(semiPerimeter * (semiPerimeter - side1) * (semiPerimeter - side2) * (semiPerimeter - side3));
 }

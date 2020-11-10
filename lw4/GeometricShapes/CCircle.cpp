@@ -10,11 +10,13 @@ CCircle::CCircle(CPoint& center, const double radius, const std::string outlineC
 
 double CCircle::GetArea() const
 {
+    //πr2
 	return M_PI * m_radius * m_radius;
 }
 
 double CCircle::GetPerimeter() const
 {
+    //2πr
 	return MULTIPLICATION_FACTOR * M_PI * m_radius;
 }
 

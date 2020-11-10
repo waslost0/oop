@@ -15,6 +15,7 @@ double CLineSegment::GetArea() const
 
 double CLineSegment::GetPerimeter() const
 {
+    // √ ((X2-X1)²+(Y2-Y1)²)
 	return sqrt(pow(m_endPoint.GetX() - m_startPoint.GetX(), POWER_NUMBER) + pow(m_endPoint.GetY() - m_startPoint.GetY(), POWER_NUMBER));
 }
 
