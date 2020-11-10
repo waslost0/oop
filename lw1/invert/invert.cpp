@@ -58,6 +58,7 @@ float DeterminantMatrix3x3(Matrix3x3& matrix)
 	return determinant;
 }
 
+// minor matrix
 void CalculationMatrix(Matrix3x3& transposeMatrix, Matrix3x3& matrixCalc)
 {
 	Matrix2x2 minorMatrix;

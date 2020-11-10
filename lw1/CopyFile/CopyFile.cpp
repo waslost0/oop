@@ -3,6 +3,9 @@
 #include <optional>
 #include <string>
 
+const std::string INVALID_ARGUMENTS = "Invalid arguments count\nUsage: copyfile.exe <input file> <output file>\n";
+const std::string SAVE_FAIL = "Failed to save data on disk\n";
+
 struct Args
 {
 	std::string inputFileName;
@@ -13,8 +16,7 @@ std::optional<Args> ParseArgs(int argc, char* argv[])
 {
 	if (argc != 3)
 	{
-		std::cout << "Invalid arguments count\n"
-			<< "Usage: copyfile.exe <input file> <output file>\n";
+		std::cout << INVALID_ARGUMENTS;
 		return std::nullopt;
 	}
 	Args args;
@@ -54,14 +56,14 @@ int main(int argc, char* argv[])
 	{
 		if (!output.put(ch))
 		{
-			std::cout << "Failed to save data on disk\n";
+			std::cout << SAVE_FAIL;
 			return 1;
 		}
 	}
 
 	if (!output.flush())
 	{
-		std::cout << "Failed to save data on disk\n";
+		std::cout << SAVE_FAIL;
 		return 1;
 	}
 

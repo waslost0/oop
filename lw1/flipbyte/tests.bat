@@ -62,9 +62,10 @@ echo Test 11 passed >> %LOG%
 
 echo Program testing succeeded
 echo Program testing succeeded >> %LOG%
-exit 0
+exit
 
 :err
 echo Program testing failed
 echo Program testing failed >> %LOG%
-exit 1
+exit
+
