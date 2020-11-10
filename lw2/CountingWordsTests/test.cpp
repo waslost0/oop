@@ -1,9 +1,8 @@
 #include "pch.h"
-#include "../CountingWords/Process.h"
 #include "../CountingWords/Process.cpp"
 
 
-TEST(CountEmptyString)
+TEST(CountingWords, CountEmptyString)
 {
 
 	std::string str = "";
@@ -12,7 +11,7 @@ TEST(CountEmptyString)
 }
 
 
-TEST(CountSpacesString)
+TEST(CountingWords, CountSpacesString)
 {
 	std::string str = "     ";
 	WordCounting outMap = {};
@@ -20,7 +19,7 @@ TEST(CountSpacesString)
 }
 
 
-TEST(CountOneWord)
+TEST(CountingWords, CountOneWord)
 {
 	std::string str = "HeLLo";
 	WordCounting outMap = { {"hello", 1} };
@@ -28,15 +27,15 @@ TEST(CountOneWord)
 }
 
 
-TEST(CountRepeatWords)
+TEST(CountingWords, CountRepeatWords)
 {
-	std::string str = "HeLLo Hello heLLo";
+	std::string str = "HeLLo HelLo heLLo";
 	WordCounting outMap = { {"hello", 3} };
 	EXPECT_EQ(CountWord(str), outMap);
 }
 
 
-TEST(CountLongString)
+TEST(CountingWords, CountLongString)
 {
 	std::string str = "Lorem ID ipsum dolor feUGiat loREM amet, id lorem FEugiat.";
 	WordCounting outMap = { {"amet,", 1}, {"dolor", 1}, {"feugiat", 1}, {"feugiat.", 1}, {"id", 2}, {"ipsum", 1}, {"lorem", 3} };

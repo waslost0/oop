@@ -118,6 +118,10 @@ void CCarCommunication::ProcessingCommand()
 		{
 			SetSpeedMode(m_car);
 		}
+		else if (str == HELP)
+		{
+			m_output << HELP_INFO;
+		}
 		else
 		{
 			m_output << UNKNOWN_MODE;
